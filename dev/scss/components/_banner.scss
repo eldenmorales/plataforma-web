@@ -1,0 +1,38 @@
+.banner {
+    position: relative;
+    
+    &__img {
+        height: 500px;
+        width: 100%;
+        display: block;
+    }
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        &__title {
+            font-size: 1.4em;
+            margin: 0;
+            background: $color2;
+            @include desde($large) {
+                font-size: 1.4em;
+                font-weight: $light;
+            }
+        }
+        &__paragraph {
+            font-size: 2em;
+            @include desde($large) {
+                font-size: 3em;
+            }
+        }
+        &__button {
+            font-size: .8em;
+            @include desde($large) {
+                font-size: 1em;
+            }
+        }
+    }
+}

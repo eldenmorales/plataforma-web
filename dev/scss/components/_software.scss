@@ -1,0 +1,49 @@
+.software-container {
+    @include desde($small) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.software-title {
+    text-align: center;
+    width: 100%;
+}
+
+.software-group {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(#000, .07);
+    margin-bottom: 1.5em;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid rgba($color1, .2);
+
+    @include desde($small) {
+        width: calc(50% - .5em);
+        margin: 0 0 1em;
+    }
+
+    @include desde($large) {
+        width: calc(25% - 1em);
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 50%;
+        border: 3px solid $color2;
+    }
+    &__name {
+        margin: 0;
+    }
+    &__button {
+        font-size: .8em;
+    }
+}
+
+.nosotros {
+    width: 70%;
+    margin: 0 auto;
+}
+

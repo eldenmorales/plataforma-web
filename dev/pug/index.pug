@@ -1,0 +1,29 @@
+extends templates/template.pug
+append config
+	-page = 'Inicio';
+block banner
+		.banner
+			img(src="img/banner.jpg" alt="Banner").banner__img
+			.banner__content
+				h3.banner__content__title Plataforma web educativa
+				p.banner__content__paragraph Software Libre y software Open Source
+				a(href="#").banner__content__button.button.primary Ver más
+
+block content
+	h2.software-title Software Libre y Open Source
+	.software-group
+		img(src="img/code.jpg", alt="Software")
+		h3.software-group__name Visual Studio Code
+		a(href="#").software-group__button.button.primary Ver más
+	.software-group
+		img(src="img/code.jpg", alt="Software")
+		h3.software-group__name Visual Studio Code
+		a(href="#").software-group__button.button.primary Ver más
+	.software-group
+		img(src="img/code.jpg", alt="Software")
+		h3.software-group__name Visual Studio Code
+		a(href="#").software-group__button.button.primary Ver más
+	.software-group
+		img(src="img/code.jpg", alt="Software")
+		h3.software-group__name Visual Studio Code
+		a(href="#").software-group__button.button.primary Ver más

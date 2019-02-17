@@ -1,0 +1,13 @@
+.button {
+    display: inline-block;
+    line-height: 2.5;
+    padding: 0 1.2em;
+    margin-top: 1em .5em 0;
+    color: white;
+    &.primary {
+        background: $color4;
+        &:hover {
+            background: darken($color4, 5);
+        }
+    }
+}

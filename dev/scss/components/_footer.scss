@@ -1,0 +1,17 @@
+.main-footer {
+    background: $color5;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.social-icon {
+    font-size: 1.4em;
+    display: inline-block;
+    margin: 0 .3em;
+    color: #fff;
+    opacity: .5;
+    &:hover {
+        opacity: 1;
+    }
+}
+
