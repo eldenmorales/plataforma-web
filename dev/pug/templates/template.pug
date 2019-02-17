@@ -32,9 +32,13 @@ html(lang="es")
 
 
 		footer.main-footer
-			.buscar
-				input(type="text").buscar-text
-				input(type="button", value="Enviar").buscar-button.button.primary
+			.l-container
+				form
+					.enviar
+						input(type="text", placeholder="Dirección de correo electronico").enviar-text
+						.enviar-button
+							button.enviar-button__input.button.primary
+								span Enviar
 			.social
 				a(href="#").social-icon.icon-facebook
 				a(href="#").social-icon.icon-twitter
