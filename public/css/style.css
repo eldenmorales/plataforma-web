@@ -165,9 +165,15 @@ body {
   margin-right: auto; }
 
 .main-footer {
-  background: #25B25A;
+  background: #444444;
   padding: 1.5em 0;
   text-align: center; }
+
+.buscar-button {
+  border: none; }
+
+.buscar-text {
+  height: 35px; }
 
 .social-icon {
   font-size: 1.4em;

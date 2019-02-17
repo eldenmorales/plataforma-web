@@ -1,7 +1,16 @@
 .main-footer {
-    background: $color5;
+    background: $color3;
     padding: 1.5em 0;
     text-align: center;
+}
+
+.buscar {
+    &-button {
+        border: none;
+    }
+    &-text {
+        height: 35px;
+    }
 }
 
 .social-icon {
