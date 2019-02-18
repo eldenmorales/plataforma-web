@@ -167,7 +167,7 @@ body {
 .main-footer {
   background: #2B2B2B;
   padding: 1.5em 0;
-  text-align: center; }
+  text-align: right; }
 
 .enviar {
   display: -ms-flexbox;
