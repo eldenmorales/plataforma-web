@@ -5,72 +5,83 @@
 }
 
 .enviar {
-    max-width: 360px;
     display: flex;
+    max-width: 455px;
     position: relative;
     &-text {
-        position: relative;
-        margin-bottom: 0;
-        height: 40px;
-        // width: 100%;
-        flex: 1 1 auto;
-        vertical-align: middle;
-        transition: none;
-        border-radius: 5% 0 0 5%;
-        border: 1px solid #ddd;
-        padding: 6px 12px;
-        font-size: 1rem;
-        line-height: 1.61803;
-        color: #2b2b2b;
-        background-color: #fff;
         background-clip: padding-box;
-        border: 1px solid #aab7c2;
+        background-color: #fff;
+        border: 1px solid $color1;
+        border-radius: 5% 0 0 5%;
         box-shadow: none;
-        overflow: visible;
+        color: #2b2b2b;
+        flex: 1 1 auto;
+        font-family: $font-text;
+        font-size: 1rem;
+        height: 40px;
+        line-height: 1.61803;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        position: relative;
+        transition: none;
+        vertical-align: middle;
+        z-index: 2;
         &:focus {
             border: 1px solid #222;
         }
     }
     &-button {
-        display: flex;
-        overflow: visible;
         align-items: stretch;
-        font-size: 0;
-        position: relative;
-        z-index: 3;
+        display: flex;
         flex-shrink: 0;
-        white-space: nowrap;
+        font-size: 0;
         max-width: 360px;
+        overflow: visible;
+        position: relative;
+        white-space: nowrap;
+        z-index: 3;
         &__input {
-            height: 40px;
-            // width: 100%;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 1rem;
-            line-height: 1.25rem;
+            border: 1px solid transparent;
             border-radius: 4px;
             border-width: 0;
-            border: 1px solid transparent;
-            vertical-align: middle;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            height: 40px;
+            line-height: 1.25rem;
+            margin: 0;
+            margin-left: -1px;
+            overflow: visible;
             text-align: center;
             text-decoration: none;
             text-transform: none;
-            margin: 0;
-            overflow: visible;
-            box-sizing: border-box;
-            margin-left: -1px;
+            vertical-align: middle;
         }
     }
 }
 
-.social-icon {
-    font-size: 1.4em;
-    display: inline-block;
-    margin: 0 .3em;
-    color: #fff;
-    opacity: .5;
-    &:hover {
-        opacity: 1;
+.social {
+    &-icon {
+        color: #fff;
+        display: inline-block;
+        font-size: 1.4em;
+        margin: 0 .3em;
+        opacity: .5;
+        position: relative;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &::before {
+        background: $color1;
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 1.7em 0;
+        position: relative;
+        top: 0;
+        width: 100%;
     }
 }
-
