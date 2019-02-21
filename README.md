@@ -2,7 +2,7 @@
 
 [Link de la web](https://kevintorresc.github.io/plataforma-web-open-source/public/index.html)
 
-## Descargar
+## Descargar con git
 
 * Requiere tener instalado Git, [instalar Git](https://git-scm.com/)
 
