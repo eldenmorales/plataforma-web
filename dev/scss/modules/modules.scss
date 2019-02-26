@@ -1,0 +1,36 @@
+.line::before {
+  background: $color-4;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 1.7em 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+// .title {
+//   text-align: center;
+//   width: 100%;
+// }
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  margin-right: 10px;
+}
+
+.mark {
+  background: $color-2;
+  font-size: 1.4em;
+}
+
+.content {
+  @extend .software;
+  width: 70%;
+  margin: 0 auto;
+}

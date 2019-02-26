@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  line-height: 2.5;
+  padding: 0 1.2em;
+  margin-top: 1em .5em 0;
+  color: white;
+  &.primary {
+    background: $color-3;
+    &:hover {
+        background: darken($color-3, 5);
+    }
+  }
+  @include desde($breakpoints, large) {
+    font-size: 1em;
+   }
+}

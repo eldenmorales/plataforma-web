@@ -1,0 +1,11 @@
+.focus:focus {
+  border: 1px solid #222;
+}
+
+.main-nav.show {
+  right: 0;
+}
+
+body.show {
+  right: $offcanvas-width;
+}

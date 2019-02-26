@@ -1,0 +1,25 @@
+.banner {
+  position: relative;
+
+  &__img {
+    display: block;
+    height: 500px;
+    width: 100%;
+  }
+
+  &__content {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 90%;
+
+    &__paragraph {
+      font-size: 2em;
+      @include desde($breakpoints, large) {
+        font-size: 3em;
+      }
+    }
+  }
+}

@@ -1,33 +1,35 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const pug = require('gulp-pug')
-const autoprefixer = require('gulp-autoprefixer')
+const { watch, src, dest, parallel } = require('gulp');
+const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
-let styleSRC = './dev/scss/style.scss'
-let styleDIST = './public/css/'
-let pugSRC = 'dev/pug/*.pug'
-let pugDIST = 'public/'
+const paths = {
+  styles: {
+    src: 'dev/scss/*.scss',
+    dest: 'public/css'
+  },
+  pages: {
+    src: 'dev/pug/*.pug',
+    dest: 'public'
+  }
+}
 
-gulp.task('pug', () => {
-	gulp.src(pugSRC)
-		.pipe(pug({
-			pretty: true
-		}))
-		.pipe(gulp.dest(pugDIST))
-})
+function pages() {
+  return src(paths.pages.src)
+    .pipe(pug())
+    .pipe(dest(paths.pages.dest))
+}
 
-gulp.task('sass', () => {
-    gulp.src(styleSRC)
-        .pipe(sass({
-        	outputStyle: 'expended',
-        }))
-        .pipe(autoprefixer({
-        	browsers: ['last 2 versions']
-        }))
-        .pipe(gulp.dest(styleDIST))
-})
+function styles() {
+  return src(paths.styles.src)
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(dest(paths.styles.dest))
+}
 
-gulp.task('default', () => {
-	gulp.watch('./dev/scss/**/*.scss', ['sass'])
-	gulp.watch('./dev/pug/**/*.pug', ['pug'])
-})
+watch(paths.pages.src, pages);
+watch(paths.styles.src, styles);
+
+exports.styles = styles;
+exports.pages = pages;
+exports.default = parallel(pages, styles)

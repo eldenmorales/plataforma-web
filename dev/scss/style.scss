@@ -1,48 +1,48 @@
-// Paleta de color
-$color1: #8D8B81;
-$color2: #FFDA63;
-$color3: #2B2B2B;
-$color4: #1976D2;
-$color5: #25B25A;
-$color6: #004F1E;
-$color7: #00A63F;
+@charset 'utf-8';
 
-// Fuentes
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Oswald:300,400');    
-// Oswald para los titulo
+// Colors
+$color-1: #25B25A;
+$color-2: #FFDA63;
+$color-3: #1976D2;
+$color-4: #8D8B81;
+$color-5: #2B2B2B;
+
+// Fonts
 $font-title: 'Oswald', sans-serif;
-
-// Lato para los textos
 $font-text: 'Lato', sans-serif;
-// Ancho de las fuentes
-$light: 300;
-$normal: 400;
+$text-light: 300;
+$text-normal: 400;
 
-// Layout
+// width
 $max-width: 1200px;
-
-// Off canvas
 $offcanvas-width: 15em;
 
-// mixin para media queries
-@mixin desde($size) {
-    @media screen and (min-width: $size) {
-        @content;
-    }
+// breakpoints
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  large: 1025px,
+  x-large: 1400px,
+);
+
+// Mixin media queries
+@mixin desde($map, $size) {
+  @media screen and (min-width: map-get($map, $size)) {
+      @content;
+  }
 }
 
-// breakpoints
-$small: 480px;
-$medium: 768px;
-$large: 1025px;
-$x-large: 1400px;
-
 // Imports
-@import "components/base";
-@import "components/header";
-@import "components/menu";
-@import "components/banner";
-@import "components/buttons";
-@import "components/software";
-@import "components/modules";
-@import "components/footer";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Oswald:300,400');
+@import 'base/base';
+@import 'layout/article';
+@import 'layout/banner';
+@import 'layout/container';
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'modules/buttons';
+@import 'modules/menu';
+@import 'modules/modules';
+@import 'states/state';
+@import 'theme/theme';
