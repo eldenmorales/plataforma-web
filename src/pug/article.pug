@@ -1,0 +1,32 @@
+extends template/template
+
+block content
+  h2 Artículo
+
+  .article-container
+    .article.flexbox
+      img(src="img/code.jpg", alt="Software").article__img
+      .article__content
+        h3 Visual Studio Code
+        p Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.  Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.
+        a(href="#").button.primary.link Visitar Sitio web
+        a(href="#").button.primary.link Descargar
+        p categoria:
+          a(href="#").category Editor de código
+    .galery
+      img(src="img/code.jpg", alt="").galery__img
+      img(src="img/code.jpg", alt="").galery__img
+      img(src="img/code.jpg", alt="").galery__img
+      img(src="img/code.jpg", alt="").galery__img
+
+  .tabs-comtainer
+    ul.tabs#tabs
+      li.tabs__item.active Tab 1
+      li.tabs__item Tab 2
+    .panels
+      .panels__item.active
+        h3 Sección 1
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorum impedit reiciendis nisi ex. Atque veritatis necessitatibus delectus provident, eum rerum, tempora nihil! Dicta asperiores facere suscipit temporibus adipisci, libero?
+      .panels__item
+        h3 Sección 2
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorum impedit reiciendis nisi ex. Atque veritatis necessitatibus delectus provident, eum rerum, tempora nihil! Dicta asperiores facere suscipit temporibus adipisci, libero?
