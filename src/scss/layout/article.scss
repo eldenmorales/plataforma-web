@@ -5,10 +5,10 @@
     flex-direction: initial;
   }
   &__img {
-    border: 3px solid $color-2;
+    border: 2px solid $color-1;
   }
   &__content {
-    padding: 0 1.5em;
+    padding-left: 1.5em;
   }
 }
 
@@ -25,20 +25,21 @@
 }
 
 .galery {
-  display: flex;
-  // width: 100%;
-  // max-width: 1000px;
-  overflow: hidden;
   &__img {
-    width: 50%;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    height: auto;
-    margin-right: 20px;
     border-radius: 5%;
-    &:last-child {
-      margin-right: 0;
+    @include desde($breakpoints, small) {
+      height: auto;
+      width: 1% * (100/4);
+      margin-top: 20px;
+      padding-right: 10px;
+      &:last-child {
+        padding-right: 0;
+      }
     }
+  }
+  @include desde($breakpoints, small) {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 

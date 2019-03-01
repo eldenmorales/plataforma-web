@@ -9,11 +9,6 @@
   width: 100%;
 }
 
-// .title {
-//   text-align: center;
-//   width: 100%;
-// }
-
 .flexbox {
   display: flex;
   justify-content: space-between;
@@ -21,7 +16,10 @@
 }
 
 .link {
-  margin-right: 10px;
+  margin-right: 5px;
+  @include desde($breakpoints, medium) {
+    margin-right: 10px;
+  }
 }
 
 .mark {
