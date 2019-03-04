@@ -1,5 +1,5 @@
 .main-nav {
-  background: darken($color-1, 25%);
+  background: darken($color-3, 25%);
   position: fixed;
   top: 0;
   right: -$offcanvas-width;
@@ -15,8 +15,10 @@
   padding: 0;
   list-style: none;
   &__item {
-      border-bottom: 1px solid rgba($color-3, .2);
-
+    border-bottom: 1px solid rgba($color-3, .2);
+    &:hover {
+      opacity: 0.5;
+    }
   }
   &__link {
     color: #fff;
