@@ -28,16 +28,20 @@ const paths = {
 
 function pages() {
   return src(paths.pages.src)
-    .pipe(pug())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(dest(paths.pages.dest))
 }
 
 function styles() {
   return src(paths.styles.src)
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
     .on("error", sass.logError)
     .pipe(autoprefixer())
-    .pipe(minifycss())
+    // .pipe(minifycss())
     .pipe(dest(paths.styles.dest))
     .pipe(browserSync.stream());
 }
