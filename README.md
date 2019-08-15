@@ -1,6 +1,6 @@
 # Plataforma web open source
 
-[Link de la web](https://kevintorresc.github.io/plataforma-web-open-source/public/index.html)
+[Link de la web](https://eldenmorales.github.io/plataforma-web/public/)
 
 ## Descargar con git
 
